@@ -23,9 +23,21 @@ function convertToRoman(num) {
         num -= numerals[i]
       }
     }
-  
-  
+
     return roman;
   }
   
-  convertToRoman(2);
+
+
+function roman_number(){
+    let number = document.getElementById("number").value;
+    if (number > 3999) {
+      number = "0"
+    }
+    number = convertToRoman(number);
+    document.getElementById("roman").value = number;
+}
+
+
+
+
