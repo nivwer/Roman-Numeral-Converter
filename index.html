@@ -4,15 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Roman Numeral Converter</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
       <div class="container">
-        <p>Roman Numeral Converter</p>
-        <input type="number" id="number" placeholder="Number" min="1" max="3999" required>
-        <input type="text" id="roman" readonly="readonly">
-        <button id="convert" onclick="roman_number()">Convert</button>
+        <p data-aos="zoom-out">Roman Numeral Converter</p>
+        <input type="number" id="number" placeholder="Number" min="1" max="3999" required data-aos="zoom-out">
+        <input type="text" id="roman" readonly="readonly" data-aos="zoom-out">
+        <button id="convert" onclick="roman_number()" data-aos="zoom-out"><span><b>Convert</b></span></button>
       </div>
+      <script src="converter.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
     </body>
-    <script src="converter.js"></script>
 </html>
