@@ -1,12 +1,31 @@
+:root {
+    --color-letter: #eaf9fa;
+    --color-letter2: #020305;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 body {
-    background-image: linear-gradient(350deg, #0ddecc, #a27affa2 70%);
-    color: #eaf9fa;
+    background: linear-gradient(-75deg, #c2bf92, #66ac92, #686077, #641f5e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: var(--color-letter);
     font-family: sans-serif;
     font-size: 20px; 
     width: 100vw;
@@ -18,16 +37,19 @@ body {
 } 
 
 .container {
-    width: 400px;
+    width: 800px;
     height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
     border-radius: 2px;
-    box-shadow: 4px 4px 50px 5px cornflowerblue;
+}
+
+.container p {
+    font-size: clamp(20px, 7vw, 50px);
 }
 
 #number::-webkit-inner-spin-button,
@@ -35,49 +57,73 @@ body {
     -webkit-appearance: none; 
 }
 
-
 #number, #roman {
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
-    width: 50%;
-    height: 25px;
+    width: 30%;
+    height: 30px;
     background-color: #ffffff;
     border: none;
-    outline: 0px solid cornflowerblue;
-    transition-property: outline;
-    transition-duration: 0.1s;
+    outline: 0px solid #424242;
     border-radius: 2px;
     z-index: 4;    
 }
 
 #number:hover {
-    outline: 1px solid cornflowerblue;
+    outline: 2px solid #424242;
 }
 #number:focus {
-    outline: 1px solid cornflowerblue;
+    outline: 2px solid #424242;
 }
 
+#roman {
+    background-color: #ffffff00;
+    color: var(--color-letter);
+}
 
 #convert {
-    font-size: 16px;
-    color: #eaf9fa;
-    text-align: center;
-    margin-top: 10px;
-    width: 40%;
-    height: 32px;
+    position: relative;
+    display: inline-block;
+    width: auto; height: auto;
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
-    background-image: linear-gradient(330deg, #a27affd9, #0ddecd81 );
-    box-shadow: 7px 4px 50px 10px cornflowerblue;
-    transition-property: box-shadow, translate;
-    transition-duration: 0.4s;
-}
-
-#convert:hover {
-    box-shadow: 4px 4px 20px 2px cornflowerblue;
-    translate: 0 -3px;
     cursor: pointer;
+    margin: 0px 25px 15px;
+    min-width: 150px;
 }
 
+#convert span {         
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    color: var(--color-letter);
+    border: 1px solid var(--color-letter);
+    transition: 0.2s;
+}
+
+#convert span:hover {
+    color: var(--color-letter2);
+    transition: 0.2s;
+}
+
+
+#convert::before {
+    content: " ";
+    background-color: var(--color-letter);
+    transition: 0.3s ease-out;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; 
+    height: 100%; width: 0%;
+}
+
+#convert:hover::before {
+    width: 100%;
+}
 
 
