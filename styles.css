@@ -48,7 +48,7 @@ body {
     border-radius: 2px;
 }
 
-.container p {
+.container h1 {
     font-size: clamp(20px, 7vw, 50px);
 }
 
