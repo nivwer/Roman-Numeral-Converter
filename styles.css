@@ -1,42 +1,30 @@
 :root {
-    --color-letter: #eaf9fa;
-    --color-letter2: #020305;
-}
-
-* {
+    --color-letter: #979797;
+    --color-letter2: #000000;
+    --color-primary: #424242;
+    --color-secondary: #000000;
+  }
+  
+  * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-body {
-    background: linear-gradient(-75deg, #c2bf92, #66ac92, #686077, #641f5e);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    font-family: 'Gideon Roman', cursive;
+  }
+  
+  body {
+    background-color: var(--color-secondary);
     color: var(--color-letter);
-    font-family: sans-serif;
-    font-size: 20px; 
+    font-size: 20px;
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-} 
-
-.container {
+  }
+  
+  .container {
     width: 800px;
     height: 250px;
     display: flex;
@@ -46,84 +34,73 @@ body {
     text-align: center;
     gap: 20px;
     border-radius: 2px;
-}
-
-.container h1 {
-    font-size: clamp(20px, 7vw, 50px);
-}
-
-#number::-webkit-inner-spin-button,
-#number::-webkit-outer-spin-button {
-    -webkit-appearance: none; 
-}
-
-#number, #roman {
-    font-size: 18px;
+  }
+  
+  .container h1 {
+    font-size: clamp(22px, 7vw, 44px);
+  }
+  
+  
+  #number,
+  #roman {
+    color: var(--color-letter);
+    font-size: 20px;
     text-align: center;
     width: 30%;
     height: 30px;
-    background-color: #ffffff;
+    background-color: var(--color-secondary);
     border: none;
-    outline: 0px solid #424242;
+    outline: none;
     border-radius: 2px;
-    z-index: 4;    
-}
-
-#number:hover {
-    outline: 2px solid #424242;
-}
-#number:focus {
-    outline: 2px solid #424242;
-}
-
-#roman {
-    background-color: #ffffff00;
+    z-index: 4;
+    padding: 10px;
+  }
+  
+  #number:hover,
+  #number:focus {
+    outline: 1px solid var(--color-primary);
+  }
+  
+  #roman {
     color: var(--color-letter);
-}
-
-#convert {
+  }
+  
+  #convert {
+    font-size: 20px;
     position: relative;
     display: inline-block;
-    width: auto; height: auto;
+    width: auto;
+    height: auto;
     background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin: 0px 25px 15px;
-    min-width: 150px;
-}
-
-#convert span {         
-    position: relative;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    top: 0; left: 0;
-    width: 100%;
-    padding: 15px 20px;
     color: var(--color-letter);
-    border: 1px solid var(--color-letter);
-    transition: 0.2s;
-}
-
-#convert span:hover {
-    color: var(--color-letter2);
-    transition: 0.2s;
-}
-
-
-#convert::before {
-    content: " ";
+    border: 2px solid var(--color-letter);
+    cursor: pointer;
+    margin: 10px 25px 15px;
+    min-width: 150px;
+    padding: 8px;
+    transition: background-color, color, 0.3s;
+  }
+  
+  #convert:hover {
     background-color: var(--color-letter);
-    transition: 0.3s ease-out;
-    position: absolute;
-    top: 0; bottom: 0; left: 0; 
-    height: 100%; width: 0%;
-}
+    color: var(--color-letter2);
+  }
 
-#convert:hover::before {
-    width: 100%;
-}
+
+  #nivwer {
+    font-size: 18px;
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+  }
+
+  #nivwer > a {
+    text-decoration: none;
+    color: var(--color-letter1);
+    outline: none;
+  }
+
+
 
 

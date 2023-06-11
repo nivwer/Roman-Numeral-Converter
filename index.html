@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Roman Numeral Converter</title>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-      <div class="container">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="nivwer">
+    <meta name="description" content="Roman Numeral Converter Page">
+    <meta name="keywords" content="Roman, Converter">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roman Numeral Converter</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <div class="container">
         <h1 data-aos="zoom-out">Roman Numeral Converter</h1>
-        <input type="number" id="number" placeholder="Number" min="1" max="3999" required data-aos="zoom-out">
+        <input type="text" id="number" placeholder="Number" min="1" max="3999" required data-aos="zoom-out">
         <input type="text" id="roman" readonly="readonly" data-aos="zoom-out">
-        <button id="convert" onclick="roman_number()" data-aos="zoom-out"><span><b>Convert</b></span></button>
-      </div>
-      <script src="converter.js"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-          AOS.init();
-      </script>
-    </body>
+        <button id="convert" onclick="roman_number()" data-aos="zoom-out"><b>Convert</b></button>
+
+        <div id="nivwer">
+            <a href="https://github.com/nivwer" target="_blank">by nivwer</a>
+        </div>
+    </div>
+    <script src="converter.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
 </html>
